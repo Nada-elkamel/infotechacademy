@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Scientist & Enseignante Informatique / IA — Grombalia & En Ligne</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+                <i data-lucide="brain-circuit" class="w-6 h-6 text-sky-600 dark:text-sky-400"></i>
+                <span>Data Science & CS</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">À Propos</a>
+                <a href="#parcours" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Parcours</a>
+                <a href="#services" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Services & Tarifs</a>
+                <a href="#contact" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <!-- Dark Mode Toggle -->
+                <button id="themeToggle" aria-label="Changer de thème" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-sky-600 transition-colors">
+                    <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+                    <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+                </button>
+                
+                <a href="#contact" class="hidden sm:inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all shadow-sm shadow-sky-500/20">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    Réserver un cours
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-100 dark:bg-sky-950/60 border border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-300 text-xs sm:text-sm font-medium">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                    Doctorante à l'ENSI & Data Scientist
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+                    Expertise en Data Science & Cours d'Informatique
+                </h1>
+
+                <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+                    Doctorante à l'École Nationale des Sciences de l'Informatique (ENSI) et Data Scientist. Je propose des <strong>cours particuliers d'informatique pour lycéens</strong> et anime des <strong>workshops spécialisés</strong> en IA, Data Science, Machine Learning et Deep Learning.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 text-sm text-slate-600 dark:text-slate-400 pt-2">
+                    <span class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-md font-medium">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-sky-600"></i>
+                        Grombalia, Tunisie
+                    </span>
+                    <span class="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-md font-medium">
+                        <i data-lucide="laptop" class="w-4 h-4 text-sky-600"></i>
+                        En Ligne
+                    </span>
+                    <span class="flex items-center gap-1.5 bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 px-3 py-1.5 rounded-md font-bold">
+                        <i data-lucide="tag" class="w-4 h-4 text-emerald-600"></i>
+                        Tarif : 15 DT / Heure
+                    </span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#services" class="inline-flex justify-center items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-all shadow-md shadow-sky-500/20">
+                        Découvrir les cours & workshops
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#contact" class="inline-flex justify-center items-center gap-2 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-white px-6 py-3 rounded-lg font-semibold text-sm transition-colors">
+                        Prendre contact
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Badge / Card -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="w-full max-w-md bg-white dark:bg-slate-800/80 rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-200 dark:border-slate-700/60 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-sky-500/10 rounded-full blur-2xl"></div>
+                    
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 rounded-2xl bg-sky-600 text-white flex items-center justify-center text-2xl font-bold shadow-lg shadow-sky-600/30">
+                            DS
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Data Scientist</h3>
+                            <p class="text-xs text-sky-600 dark:text-sky-400 font-medium">Nada El kamel - Doctorante à ENSI</p>
+                            <p class="text-xs text-slate-500 dark:text-slate-400">Grombalia & En ligne</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 border-t border-slate-100 dark:border-slate-700/50 pt-4">
+                        <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+                            <span>Doctorat en cours à l'ENSI</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+                            <span>Master Systèmes Intelligents</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+                            <span>Licence Développement Systèmes d'Information (DSI)</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+                            <span>Cours particuliers en informatique pour les lycéens</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>
+                            <span>Workshops IA, ML, Deep Learning & Data Science</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white dark:bg-slate-800/50 border-y border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">À Propos & Approche</h2>
+                <div class="w-12 h-1 bg-sky-600 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                    <div class="w-12 h-12 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-4">
+                        <i data-lucide="award" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Excellence Académique</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">
+                        Doctorante à l'ENSI, titulaire d'un Master en Systèmes Intelligents et d'une Licence en Développement des Systèmes d'Information (DSI). Une solide assise théorique et pratique.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                    <div class="w-12 h-12 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-4">
+                        <i data-lucide="compass" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Didactique & Transmission</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">
+                        Une approche structurée adaptée aux exigences du programme secondaire tunisien ainsi qu'aux besoins d'apprentissage avancé pour étudiants et professionnels.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                    <div class="w-12 h-12 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-4">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Flexibilité Géographique</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">
+                        Séances dispensées en présentiel à <strong>Grombalia</strong> ou à distance via des plateformes d'apprentissage interactives <strong>en ligne</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline / Qualification Section -->
+    <section id="parcours" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Parcours Académique</h2>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Un cursus rigoureux en sciences de l'informatique et intelligence artificielle</p>
+            <div class="w-12 h-1 bg-sky-600 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="max-w-3xl mx-auto relative border-l-2 border-sky-200 dark:border-sky-900 ml-4 sm:ml-auto pl-6 sm:pl-8 space-y-10">
+            <!-- Doctorat ENSI -->
+            <div class="relative">
+                <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 rounded-full bg-sky-600 border-4 border-slate-50 dark:border-slate-900"></div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <span class="text-xs font-bold text-sky-600 dark:text-sky-400 tracking-wider uppercase">En Cours</span>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1">Doctorante en Informatique</h3>
+                    <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">École Nationale des Sciences de l'Informatique (ENSI)</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Travaux de recherche avancés et spécialisation dans les technologies émergentes en intelligence artificielle et data science.</p>
+                </div>
+            </div>
+
+            <!-- Master -->
+            <div class="relative">
+                <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 rounded-full bg-sky-500 border-4 border-slate-50 dark:border-slate-900"></div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <span class="text-xs font-bold text-slate-500 dark:text-slate-400 tracking-wider uppercase">Diplôme Obtenu</span>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1">Master en Systèmes Intelligents</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Spécialisation avancée en modélisation, apprentissage automatique, réseaux de neurones et analyse de données complexes.</p>
+                </div>
+            </div>
+
+            <!-- Licence DSI -->
+            <div class="relative">
+                <div class="absolute -left-[31px] sm:-left-[39px] top-1.5 w-5 h-5 rounded-full bg-sky-400 border-4 border-slate-50 dark:border-slate-900"></div>
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <span class="text-xs font-bold text-slate-500 dark:text-slate-400 tracking-wider uppercase">Diplôme Obtenu</span>
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mt-1">Licence en Développement des Systèmes d'Information (DSI)</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">Fondations solides en génie logiciel, algorithmique, structures de données, bases de données et développement d'applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Tarifs Section -->
+    <section id="services" class="py-16 bg-white dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Services & Tarifs</h2>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Des cours ciblés pour les lycéens et des workshops d'expertise technique</p>
+                <div class="w-12 h-1 bg-sky-600 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service 1: Cours particuliers -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-sky-100 dark:bg-sky-900/60 text-sky-700 dark:text-sky-300">Lycée</span>
+                            <span class="text-sm font-extrabold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-3 py-1 rounded-full border border-emerald-200 dark:border-emerald-800">
+                                15 DT / heure
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Cours Particuliers en Informatique</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6">
+                            Accompagnement personnalisé pour les élèves du secondaire. Préparation rigoureuse aux examens et devoirs de synthèse.
+                        </p>
+                        
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-sky-600 mt-0.5 flex-shrink-0"></i>
+                                <span>Algorithmique et Programmation (Python)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-sky-600 mt-0.5 flex-shrink-0"></i>
+                                <span>Bases de données & Web (HTML, CSS, SQL)</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-sky-600 mt-0.5 flex-shrink-0"></i>
+                                <span>Exercices pratiques & suivi régulier du progrès</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contact" class="inline-flex justify-center items-center gap-2 w-full bg-slate-900 dark:bg-slate-700 hover:bg-sky-600 dark:hover:bg-sky-600 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors">
+                        S'inscrire aux cours particuliers
+                    </a>
+                </div>
+
+                <!-- Service 2: Workshops IA & Data Science -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 dark:bg-indigo-900/60 text-indigo-700 dark:text-indigo-300">Ateliers & Workshops</span>
+                            <span class="text-xs text-slate-500 dark:text-slate-400 flex items-center gap-1">
+                                <i data-lucide="laptop" class="w-3.5 h-3.5"></i> Grombalia / En ligne
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Workshops IA, ML & Deep Learning</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 mb-6">
+                            Sessions d'immersion pratique orientées projets pour étudiants universitaires et passionnés de tech.
+                        </p>
+                        
+                        <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0"></i>
+                                <span><strong>Data Science:</strong> Pandas, NumPy, Visualisation de données</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0"></i>
+                                <span><strong>Machine Learning:</strong> Scikit-Learn, Algorithmes de classification & régression</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0"></i>
+                                <span><strong>Deep Learning:</strong> Réseaux de neurones, TensorFlow / PyTorch</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check" class="w-4 h-4 text-indigo-600 mt-0.5 flex-shrink-0"></i>
+                                <span>Projets réels et cas d'usage pratiques</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contact" class="inline-flex justify-center items-center gap-2 w-full bg-slate-900 dark:bg-slate-700 hover:bg-indigo-600 dark:hover:bg-indigo-600 text-white py-2.5 rounded-lg text-sm font-semibold transition-colors">
+                        Rejoindre un workshop
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Form Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">Contact & Inscription par E-mail</h2>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2">Remplissez le formulaire ci-dessous pour m'envoyer directement votre demande d'inscription.</p>
+            <div class="w-12 h-1 bg-sky-600 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Contact Info Sidebar -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700">
+                    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Informations</h3>
+                    
+                    <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                        <div class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 dark:text-white">Localisation</h4>
+                                <p>Grombalia, Tunisie</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">(Également disponible en ligne)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="tag" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 dark:text-white">Tarif d'une heure</h4>
+                                <p class="text-emerald-600 dark:text-emerald-400 font-bold">15 DT / heure</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 dark:text-white">Affiliation</h4>
+                                <p>Doctorante à l'ENSI</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900 dark:text-white">Disponibilité</h4>
+                                <p>En semaine & Week-ends</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-sky-50 dark:bg-sky-950/40 border border-sky-100 dark:border-sky-900">
+                    <p class="text-xs sm:text-sm text-sky-900 dark:text-sky-200">
+                        <strong>Réception par e-mail :</strong> Dès votre validation, la demande me sera immédiatement envoyée par e-mail. Je vous recontacterai ensuite rapidement par téléphone.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="lg:col-span-7">
+                <form action="https://formspree.io/f/xgaodgvn" method="POST" class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-slate-700 space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">Nom complet</label>
+                            <input type="text" name="nom" required placeholder="Ex: Mohamed Ali" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">Numéro de Téléphone</label>
+                            <input type="tel" name="telephone" required placeholder="Ex: +216 20 000 000" class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">Type de Service</label>
+                            <select name="service" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                                <option value="">Sélectionnez un service</option>
+                                <option value="Cours Particuliers Informatique (15 DT/h)">Cours Particuliers Informatique (15 DT/h)</option>
+                                <option value="Workshop Data Science">Workshop Data Science</option>
+                                <option value="Workshop Machine Learning / Deep Learning">Workshop Machine Learning / Deep Learning</option>
+                                <option value="Workshop IA">Workshop IA Générale</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">Modalité souhaitée</label>
+                            <select name="modalite" required class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                                <option value="Grombalia">Présentiel à Grombalia</option>
+                                <option value="En ligne">En ligne</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">Message / Précisions</label>
+                        <textarea name="message" rows="4" placeholder="Précisez votre niveau (ex: Bac Math, Sc. Exp, Étudiant...) ou vos attentes..." class="w-full px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-semibold py-3 rounded-lg text-sm transition-all shadow-md shadow-sky-500/20 flex items-center justify-center gap-2">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        Envoyer par e-mail
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs text-center">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p>© 2026 Data Science & Enseignement Informatique. Tous droits réservés.</p>
+            <p class="text-slate-500">Grombalia, Tunisie & En Ligne — Affiliation : Doctorante ENSI — Tarif : 15 DT / heure</p>
+        </div>
+    </footer>
+
+    <!-- Script Theme Toggle & Lucide Icons Initialization -->
+    <script>
+        lucide.createIcons();
+
+        const themeToggleBtn = document.getElementById('themeToggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
+</body>
+</html>
